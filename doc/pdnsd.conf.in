@@ -23,7 +23,7 @@ global {
 server {
 	 # Better setup dns server(DON'T USE PORT 53) on your own vps for faster proxying
 	 label = "special";
-	 ip = 8.8.8.8 208.67.222.222,8.8.4.4;
+	 ip = 8.8.8.8,208.67.220.220;
 	 port = 53;
 	 proxy_only = on;
 	 timeout = 5;
