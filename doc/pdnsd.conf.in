@@ -8,10 +8,10 @@ global {
 	cache_dir = "/var/pdnsd";
 	run_as = "nobody";
 	debug = off;
-	server_port = 1053;
+	server_port = 5300;
 	server_ip = any;
 	status_ctl = on;
-	query_method=tcp_only;
+	query_method = tcp_udp;
 	neg_domain_pol = off;
 	paranoid = on;
 	par_queries = 1;
@@ -23,8 +23,8 @@ global {
 server {
 	 # Better setup dns server(DON'T USE PORT 53) on your own vps for faster proxying
 	 label = "special";
-	 ip = 8.8.8.8,208.67.220.220;
-	 port = 53;
+	 ip = 208.67.222.222,208.67.220.220;
+	 port = 5353;
 	 proxy_only = on;
 	 timeout = 5;
 }
